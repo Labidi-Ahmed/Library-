@@ -1,0 +1,125 @@
+@font-face {
+    font-family: roboto;
+    src: url(./Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: bold-roboto;
+    src: url(./Roboto/Roboto-Bold.ttf);
+}
+
+:root {
+    font-family: roboto;
+}
+
+
+body{
+    display: grid;
+    grid-template-rows: 0.75fr 5fr 0.25fr;
+    min-height: 100vh;
+}
+
+header{
+    background-color: #fafafa;
+  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    padding: 10px 30px ;
+    display: flex;
+    align-items: center;
+   
+   
+    
+}
+.logo{
+    color: #0a0a0a;
+    font-size: 3rem;
+    font-family: bold-roboto;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+   
+
+    
+    
+}
+#new-book{
+    justify-self: center;
+    width: 5rem;
+}
+
+
+
+section{
+    background-color: #e5e7eb ;
+   
+    gap: 50px;
+    
+    
+    padding: 20px;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 0.5fr 5fr  ;
+   
+    align-content: center;
+    
+}
+
+.books-container{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    width: 100%;
+
+}
+
+.books-container .book-container{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    width: 320px;
+    height: 350px;
+}
+
+
+.modal::backdrop {
+    /* background: linear-gradient(45deg, red, blue);
+    opacity: .4; */
+}
+
+.modal{
+    width: 20%;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+form  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkbox-container{
+    flex-direction: row;
+}
+
+footer{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e7eb;
+    color: #0a0a0a;
+    font-size: 1.2rem;
+}

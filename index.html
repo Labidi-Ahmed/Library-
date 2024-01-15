@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo"> <div>library</div></div>
+    </header>
+
+    <section>
+        <button id="new-book">NEW BOOK</button>
+        <div class="books-container">
+            
+        </div>
+        
+    </section>
+    
+    
+    <dialog  class="modal" id="modal">
+        <form action="" method="">
+            
+            <div class="title-container">
+                <input type="text" name="" id="title" placeholder="Title" required>
+                <label for="title" id="error"></label>
+            </div>
+            <input type="text" name="" id="author" placeholder="Author" required>
+            <input type="number" name="" id="pages" placeholder="Pages" required>
+            <div class="checkbox-container">
+                <label for="read"> Have You read it ?</label>
+                <input type="checkbox" name="" id="read">
+            </div>
+
+
+
+
+            <button type="submit">submit</button>
+        </form>
+        
+    </dialog>
+
+
+    <footer> 
+
+        Copyright ©  <script>
+            document.write(new Date().getFullYear())
+          </script> labidi-ahmed
+         </footer>
+    
+    
+</body>
+</html>
