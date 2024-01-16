@@ -14,7 +14,7 @@
     </header>
 
     <section>
-        <button id="new-book">NEW BOOK</button>
+        <button id="new-book"><div>NEW BOOK</div><div class="plus">+</div></button>
         <div class="books-container">
             
         </div>
@@ -30,7 +30,7 @@
                 <label for="title" id="error"></label>
             </div>
             <input type="text" name="" id="author" placeholder="Author" required>
-            <input type="number" name="" id="pages" placeholder="Pages" required>
+            <input type="number" name="" id="pages" min="0" placeholder="Pages" required>
             <div class="checkbox-container">
                 <label for="read"> Have You read it ?</label>
                 <input type="checkbox" name="" id="read">
@@ -39,7 +39,7 @@
 
 
 
-            <button type="submit">submit</button>
+            <button type="submit">SUBMIT</button>
         </form>
         
     </dialog>
@@ -47,9 +47,11 @@
 
     <footer> 
 
-        Copyright ©  <script>
-            document.write(new Date().getFullYear())
-          </script> labidi-ahmed
+        <div>
+            Copyright ©  <script>
+                document.write(new Date().getFullYear())
+              </script> Labidi-Ahmed 
+        </div> <img id="github-mark" src="./images/github-mark.svg" alt="">
          </footer>
     
     

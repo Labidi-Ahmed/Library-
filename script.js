@@ -58,15 +58,21 @@ function display(){
         title.classList.add("title");
         author.classList.add("author");
         pages.classList.add("pages")
-        read.classList.add("read");
         remove.classList.add("remove");
-
+        read.classList.add("read-btn")
         // ADDING THE CONTENT TO THEM
         title.textContent=book.title;
         author.textContent=book.author;
         pages.textContent=(`${book.pages} pages`);
         let text="";
-        book.read?text="read":text="not read";
+        if(book.read){
+            text="read";
+            read.classList.add("read");
+        }
+        else{
+            text="not read";
+            read.classList.add("not-read");
+        }
         read.textContent=text;
         remove.textContent="remove";
         container.appendChild(title);
@@ -77,6 +83,7 @@ function display(){
         document.querySelector('.books-container').appendChild(container);
     
 
+        
    
     }
 
@@ -112,6 +119,7 @@ form.addEventListener('submit',(e)=>{
         addBookToLibrary(newBook);
         display()
         form.reset();
+        modal.close();
     }
     else{
         
@@ -126,6 +134,45 @@ form.addEventListener('submit',(e)=>{
 
 const newBookButton=document.querySelector("#new-book");
 const modal=document.querySelector("#modal");
+const body=document.querySelector("body");
 newBookButton.addEventListener('click',() => {
     modal.showModal();
+    
+
+})
+
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.close();
+    }
+});
+
+
+
+
+const booksContainer=document.querySelector(".books-container");
+booksContainer.addEventListener("click",(event)=>{
+    if ( event.target.classList.contains('read-btn')){
+        event.target.classList.toggle("read");
+        event.target.classList.toggle("not-read");
+    }
+    else{
+        if(event.target.classList.contains("remove") ){
+            (event.target.parentNode).remove();
+
+            }
+        
+    }
+
+})
+
+const gitHubMark=document.querySelector("#github-mark");
+gitHubMark.addEventListener('click',() =>{
+
+    const githubProfileURL = 'https://github.com/Labidi-Ahmed';
+    
+    // Navigate to the GitHub profile URL
+    window.open(githubProfileURL, '_blank');
+
 })
