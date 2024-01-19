@@ -3,9 +3,12 @@ const appendedBooks = [];
 let indexOfDisplayedBook = 0;
 
 
-// BOOK CONSTRUCTOR 
 
-function book (title,author,pages,read){
+
+class book {
+
+
+ constructor(title,author,pages,read){
     this.title=title;
     this.author=author;
     this.pages=pages;
@@ -16,6 +19,8 @@ function book (title,author,pages,read){
 
 
     }
+
+}
 
 }
 
